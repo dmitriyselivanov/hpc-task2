@@ -31,4 +31,17 @@ L3 cache:            16384K
 
 The output of cache_lines.cc is:
 ```
+Size of step in bytes: 4, avg access time: 3.52925 nanoseconds
+Size of step in bytes: 8, avg access time: 3.51646 nanoseconds
+Size of step in bytes: 16, avg access time: 3.51855 nanoseconds
+Size of step in bytes: 32, avg access time: 3.51876 nanoseconds
+Size of step in bytes: 64, avg access time: 3.53418 nanoseconds
+Size of step in bytes: 128, avg access time: 3.69324 nanoseconds
+Size of step in bytes: 256, avg access time: 3.85245 nanoseconds
+Size of step in bytes: 512, avg access time: 4.00505 nanoseconds
+Size of step in bytes: 1024, avg access time: 4.35997 nanoseconds
 ```
+
+The output images of cache_levels.cc are:
+![](img/benchmark.png)
+![](img/benchmark_threads.png)
