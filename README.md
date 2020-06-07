@@ -1,9 +1,6 @@
-Size of step in bytes: 4, avg access time: 3.53613 nanoseconds
-Size of step in bytes: 8, avg access time: 3.52613 nanoseconds
-Size of step in bytes: 16, avg access time: 3.54149 nanoseconds
-Size of step in bytes: 32, avg access time: 3.53442 nanoseconds
-Size of step in bytes: 64, avg access time: 3.52779 nanoseconds
-Size of step in bytes: 128, avg access time: 3.70736 nanoseconds
-Size of step in bytes: 256, avg access time: 3.85211 nanoseconds
-Size of step in bytes: 512, avg access time: 4.02028 nanoseconds
-Size of step in bytes: 1024, avg access time: 4.40852 nanoseconds
+# Hpc Task №2
+
+# Prerequisites
+* apt-get install build-essential
+* python3
+* matplotlib
