@@ -59,6 +59,10 @@ long double get_avg_access_time(long double array_size, bool is_random_access, i
       int first_random_index = rand() % numElementsInArray;
       int second_random_index = rand() % numElementsInArray;
 
+      if (second_random_index == first_random_index) {
+        second_random_index = rand() % numElementsInArray;
+      }
+
       int swap = array[first_random_index];
       array[first_random_index] = array[second_random_index];
       array[second_random_index] = swap;
@@ -111,7 +115,7 @@ pair<vector<int>, vector<long double>> run_experiment(bool is_random_access, int
   vector<long double> times_arr;
 
   for (int i = 2; i < MAX_POWER_OF_TWO + 1; i++) {
-    int arr_size_in_bytes = pow(2, i);
+    int arr_size_in_bytes = (1 << i);
     sizes_arr.push_back(arr_size_in_bytes);
 
     long double time = get_avg_access_time(arr_size_in_bytes, is_random_access, num_threads);
@@ -124,6 +128,8 @@ pair<vector<int>, vector<long double>> run_experiment(bool is_random_access, int
 }
 
 int main() {
+  srand((unsigned int)time(NULL));
+
   // Run experiment with random access and 1 thread
   pair<vector<int>, vector<long double>> random_access = run_experiment(1, 1);
   save_results_to_file(random_access.first, random_access.second, "random.txt");
